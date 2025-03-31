@@ -1,32 +1,60 @@
-body{
-    margin:0;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
 
 
-html{
-    scroll-behavior: smooth;
-}
-
-.logo{
-    height: 64px;
-}
-
-header{
-    background-color:rgb(255,128,0);
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    background: #f0f0f0;
+  }
+  
+  /* Header (volle Breite) */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* Innenleben vom Header (max. 1440px, zentriert) */
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: left;
-    padding: 12px 24px;
-    
-}
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Optional: Logo & Menü */
+  .logo {
 
-footer{
-    background-color:rgb(255,128,0) ;
-    height: 48px;
-    padding: 24px 48px;
-    display: flex;
-    justify-content: center;
-}
+    height: 24px;
 
+  }
+  
+  .menu {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  /* Content Wrapper */
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+  }
+  
+  /* Footer (volle Breite) */
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* Footer-Inhalt zentriert */
+  .footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
