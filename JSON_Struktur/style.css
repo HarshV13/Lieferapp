@@ -4,17 +4,20 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: sans-serif;
-    background: #f0f0f0;
+    background: #ff9f31;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
-  /* Header (volle Breite) */
+  
   header {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 16px 16px;
   }
   
-  /* Innenleben vom Header (max. 1440px, zentriert) */
+  
   .header-inner {
     max-width: 1440px;
     margin: 0 auto;
@@ -24,10 +27,10 @@ html, body {
     align-items: center;
   }
   
-  /* Optional: Logo & Menü */
+ 
   .logo {
 
-    height: 24px;
+    height: 40px;
 
   }
   
@@ -35,26 +38,29 @@ html, body {
     font-size: 1.5em;
     cursor: pointer;
   }
-  
-  /* Content Wrapper */
+ 
   .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 16px;
     box-sizing: border-box;
     flex: 1;
   }
   
-  /* Footer (volle Breite) */
+ 
   footer {
     background-color: #222;
     color: white;
-    padding: 20px 0;
+    padding: 16px 16px;
   }
   
-  /* Footer-Inhalt zentriert */
+
   .footer-inner {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+  }
+
+  .background{
+    color: bisque;
   }
