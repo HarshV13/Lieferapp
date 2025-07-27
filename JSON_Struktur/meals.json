@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Pizza",
+    "name": "Pizza Margherita",
+    "description": "mit Mozzarella",
+    "price": 8.9,
+    "image": "margherita.png"
+  },
+  {
+    "category": "Pizza",
+    "name": "Pizza Krabben",
+    "description": "mit Krabben und Peperoni",
+    "price": 9.5,
+    "image": "krabben.png"
+  },
+  {
+    "category": "Pizza",
+    "name": "Pizza Diavolo (scharf)",
+    "description": "mit Salami, Zwiebeln, Peperoni und Knoblauch",
+    "price": 8.5,
+    "image": "diavolo.png"
+  },
+  {
+    "category": "Pizza",
+    "name": "Pizza Prosciutto",
+    "description": "mit gekochtem Schinken und Champignons",
+    "price": 9.0,
+    "image": "prosciutto.png"
+  },
+  {
+    "category": "Pizza",
+    "name": "Pizza Quattro Formaggi",
+    "description": "mit vier Käsesorten",
+    "price": 9.8,
+    "image": "quattro_formaggi.png"
+  },
+  {
+    "category": "Pasta",
+    "name": "Spaghetti Bolognese",
+    "description": "mit Rindfleisch-Tomatensauce",
+    "price": 8.4,
+    "image": "bolognese.png"
+  },
+  {
+    "category": "Pasta",
+    "name": "Spaghetti Carbonara",
+    "description": "mit Sahnesauce, Ei und Speck",
+    "price": 8.9,
+    "image": "carbonara.png"
+  },
+  {
+    "category": "Pasta",
+    "name": "Penne all'Arrabbiata",
+    "description": "scharfe Tomatensauce mit Knoblauch",
+    "price": 7.9,
+    "image": "arrabbiata.png"
+  },
+  {
+    "category": "Pasta",
+    "name": "Tagliatelle al Salmone",
+    "description": "mit Lachs in Sahnesauce",
+    "price": 10.2,
+    "image": "salmone.png"
+  },
+  {
+    "category": "Pasta",
+    "name": "Lasagne al Forno",
+    "description": "mit Rindfleisch und Béchamel",
+    "price": 9.3,
+    "image": "lasagne.png"
+  },
+
+    {
+    "category": "Beilagen",
+    "name": "Pommes Frites",
+    "description": "knusprig frittiert mit Ketchup oder Mayo",
+    "price": 3.5,
+    "image": "pommes.png"
+  },
+  {
+    "category": "Beilagen",
+    "name": "Mozzarella Sticks (6 Stück)",
+    "description": "mit Dip nach Wahl",
+    "price": 4.5,
+    "image": "mozzarella_sticks.png"
+  },
+  {
+    "category": "Beilagen",
+    "name": "Knoblauchbrot",
+    "description": "frisch gebacken mit Knoblauchbutter",
+    "price": 2.9,
+    "image": "knoblauchbrot.png"
+  },
+    {
+    "category": "Getränke",
+    "name": "Coca-Cola (0,5l)",
+    "description": "inkl. Pfand",
+    "price": 2.5,
+    "image": "cola.png"
+  },
+  {
+    "category": "Getränke",
+    "name": "Wasser (still, 0,5l)",
+    "description": "inkl. Pfand",
+    "price": 1.8,
+    "image": "wasser.png"
+  },
+  {
+    "category": "Getränke",
+    "name": "Fanta (0,5l)",
+    "description": "Orangenlimonade, inkl. Pfand",
+    "price": 2.5,
+    "image": "fanta.png"
+  },
+  {
+    "category": "Getränke",
+    "name": "Eistee Pfirsich (0,5l)",
+    "description": "erfrischend süß, inkl. Pfand",
+    "price": 2.2,
+    "image": "eistee.png"
+  }
+]
