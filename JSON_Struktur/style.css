@@ -1,66 +1,341 @@
+/* === GLOBAL === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background: #ff9f31;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === LAYOUT === */
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 16px 16px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* === HEADER === */
+header {
+  background-color: #333;
+  color: white;
+  padding: 16px 16px;
+  z-index: 1;
+}
+
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* === HERO SECTION === */
+.restaurant-hero {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+
+.restaurant-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === LOGO CONTAINER (Overlay) === */
+.logo-container {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px;
+  border-radius: 20%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 20%;
+}
+
+/* === RESTAURANT HEADER === */
+.restaurant-header {
+  position: relative;
+  margin-top: -60px;
+  /* Logo overlap */
+  background: white;
+  border-radius: 12px;
+  padding: 80px 32px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.restaurant-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.rating {
+  color: #888;
+  margin: 8px 0;
+}
+
+/* === TABS === */
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  padding: 8px 16px;
+}
+
+.tab:hover {
+  color: #ff9f31;
+  border-bottom: 2px solid #ff9f31;
+}
+
+.tab.active {
+  color: #ff9f31;
+  border-bottom: 2px solid #ff9f31;
+}
+
+/* === ITEM LIST === */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.item {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  padding: 16px 12px;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.item-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.item-details h3 {
+  margin: 0 0 4px 0;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* === BUTTONS === */
+.add-btn {
+  background: #ff9f31;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: white;
+  color: #ff9f31;
+  border-style: solid;
+  border-color: #ff9f31;
+  padding: 7px 15px;
+}
+
+.main-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.main-content>div:first-child {
+  flex: 2;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: #999;
+  display: none; /* wird per JS ein-/ausgeblendet */
+}
+
+.cart-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.cart-empty-text {
+  font-size: 1rem;
+}
+
+.cart {
+  flex: 1;
+  max-width: 340px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  position: sticky;
+  top: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: -60px;
+}
+
+.cart-summary p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+.cart-summary p strong {
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.cart-summary span {
+  color: #444;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.cart-item-controls button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.cart-item-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#order-btn {
+  background-color: #ff9f31;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#order-btn:hover {
+  background-color: #e28521;
+}
+
+#confirmation {
+  color: green;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  background: #eafbe7;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+.warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px 12px;
+  border-radius: 8px;
+  margin-top: 12px!important;
+  text-align: center;
+  font-size: 0.95rem;
+  border: 1px solid #ffeeba;
+}
+
+.hidden {
+  display: none;
+}
 
 
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: sans-serif;
-    background: #ff9f31;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 16px 16px;
-  }
-  
-  
-  .header-inner {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
- 
-  .logo {
+/* === FOOTER === */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 16px 16px;
+}
 
-    height: 40px;
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-inner a{
+  color: gray;
+}
 
-  }
-  
-  .menu {
-    font-size: 1.5em;
-    cursor: pointer;
-  }
- 
-  .wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 16px;
-    box-sizing: border-box;
-    flex: 1;
-  }
-  
- 
-  footer {
-    background-color: #222;
-    color: white;
-    padding: 16px 16px;
-  }
-  
+.footer-inner a:hover{
+  color: orange;
+}
 
-  .footer-inner {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 
-  .background{
-    color: bisque;
-  }
+/* === MISC === */
+.background {
+  color: bisque;
+}
