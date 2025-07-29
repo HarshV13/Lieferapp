@@ -193,6 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadMeals();
   const mobileBtn = document.querySelector('.mobile-cart-btn');
   if (mobileBtn) mobileBtn.classList.remove('hidden');
+  window.addEventListener('resize', () => {
+  if (window.innerWidth > 710) {
+    closeCartDialog(); 
+  }
+});
 });
 
 
