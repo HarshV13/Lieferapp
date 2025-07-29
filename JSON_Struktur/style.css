@@ -204,7 +204,8 @@ header {
   text-align: center;
   padding: 32px 16px;
   color: #999;
-  display: none; /* wird per JS ein-/ausgeblendet */
+  display: none;
+  /* wird per JS ein-/ausgeblendet */
 }
 
 .cart-empty-icon {
@@ -232,7 +233,7 @@ header {
 }
 
 .cart-summary p {
-  margin: 4px 0;
+  margin: 6px 0;
   font-size: 1rem;
 }
 
@@ -244,6 +245,7 @@ header {
 .cart-summary span {
   color: #444;
 }
+
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -294,16 +296,19 @@ header {
   font-size: 0.95rem;
   margin-top: 8px;
   background: #eafbe7;
-  padding: 8px 12px;
+  padding: 12px 12px;
   border-radius: 8px;
   text-align: center;
+  margin-top: 12px !important;
+
 }
+
 .warning {
   background: #fff3cd;
   color: #856404;
   padding: 12px 12px;
   border-radius: 8px;
-  margin-top: 12px!important;
+  margin-top: 12px !important;
   text-align: center;
   font-size: 0.95rem;
   border: 1px solid #ffeeba;
@@ -326,11 +331,12 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
 }
-.footer-inner a{
+
+.footer-inner a {
   color: gray;
 }
 
-.footer-inner a:hover{
+.footer-inner a:hover {
   color: orange;
 }
 
