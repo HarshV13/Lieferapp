@@ -14,6 +14,7 @@ async function loadMeals() {
   renderMealsByCategory('Pizza'); // Default-Kategorie beim Laden
 }
 
+
 function renderMealsByCategory(category) {
   const container = document.getElementById('item-list');
   container.innerHTML = '';
@@ -40,7 +41,6 @@ function renderMealsByCategory(category) {
     });
   });
 }
-
 
 //  WARENKORB-FUNKTIONEN
 
@@ -80,6 +80,7 @@ function updateCartUI() {
   totalDisplay.textContent = total.toFixed(2) + ' €';
   updateCartUI_Mobile();
 }
+
 
 function updateCartUI_Mobile() {
   const container = document.getElementById('cart-items-mobile');
@@ -123,6 +124,7 @@ function updateCartUI_Mobile() {
   }
 }
 
+
 function addToCart(name, price) {
   if (!cart[name]) {
     cart[name] = { name, price, quantity: 1 };
@@ -131,6 +133,7 @@ function addToCart(name, price) {
   }
   updateCartUI();
 }
+
 
 function changeQty(name, delta) {
   if (cart[name]) {
@@ -142,11 +145,11 @@ function changeQty(name, delta) {
   updateCartUI();
 }
 
+
 function removeItem(name) {
   delete cart[name];
   updateCartUI();
 }
-
 
 
 //  SEITENLADUNG UND EVENTS
@@ -199,10 +202,12 @@ function openCartDialog() {
   document.querySelector('.mobile-cart-overlay').classList.remove('hidden');
 }
 
+
 function closeCartDialog() {
   document.querySelectorAll('.mobile-cart-dialog').forEach(dialog => dialog.classList.add('hidden'));
   document.querySelectorAll('.mobile-cart-overlay').forEach(overlay => overlay.classList.add('hidden'));
 }
+
 
 function orderMobileCart() {
   if (Object.keys(cart).length === 0) {
