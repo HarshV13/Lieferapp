@@ -73,6 +73,31 @@
       &copy; 2025 Bestellapp <a href="#">Impressum</a>
     </div>
   </footer>
+
+  <div class="mobile-cart-btn hidden" onclick="openCartDialog()">
+    Warenkorb öffnen (€0.00)
+  </div>
+
+  <div class="mobile-cart-overlay hidden" onclick="closeCartDialog()"></div>
+
+  <div class="mobile-cart-dialog hidden">
+    <aside class="cart mobile-cart">
+      <h2>Warenkorb</h2>
+      <div id="cart-empty-mobile" class="cart-empty">
+        <div class="cart-empty-icon">🛒</div>
+        <p class="cart-empty-text">Dein Warenkorb ist noch leer.</p>
+      </div>
+      <div class="cart-items" id="cart-items-mobile"></div>
+      <div class="cart-summary">
+        <p>Zwischensumme: <span id="subtotal-mobile">0,00 €</span></p>
+        <p>Lieferkosten: 5,00 €</p>
+        <p><strong>Gesamt: <span id="total-mobile">5,00 €</span></strong></p>
+        <button onclick="orderMobileCart()" id="order-btn-mobile">Bestellen</button>
+        <p id="empty-warning-mobile" class="hidden warning">⚠️ Bitte wähle ein Produkt aus.</p>
+        <p id="confirmation-mobile" class="hidden">🎉 Deine Testbestellung wurde abgeschickt!</p>
+      </div>
+    </aside>
+  </div>
   <script src="./script.js"></script>
 </body>
 

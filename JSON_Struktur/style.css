@@ -1,4 +1,4 @@
-/* === GLOBAL === */
+/* GLOBAL */
 html,
 body {
   height: 100%;
@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
 }
 
-/* === LAYOUT === */
+/* LAYOUT */
 .wrapper {
   max-width: 1440px;
   width: 100%;
@@ -20,7 +20,8 @@ body {
   flex: 1;
 }
 
-/* === HEADER === */
+
+/* HEADER */
 header {
   background-color: #333;
   color: white;
@@ -46,7 +47,7 @@ header {
   cursor: pointer;
 }
 
-/* === HERO SECTION === */
+/* HERO SECTION */
 .restaurant-hero {
   width: 100%;
   height: 280px;
@@ -59,7 +60,7 @@ header {
   object-fit: cover;
 }
 
-/* === LOGO CONTAINER (Overlay) === */
+/* LOGO CONTAINER (Overlay) */
 .logo-container {
   position: absolute;
   top: -80px;
@@ -79,11 +80,10 @@ header {
   border-radius: 20%;
 }
 
-/* === RESTAURANT HEADER === */
+/* RESTAURANT HEADER */
 .restaurant-header {
   position: relative;
   margin-top: -60px;
-  /* Logo overlap */
   background: white;
   border-radius: 12px;
   padding: 80px 32px 24px;
@@ -100,7 +100,7 @@ header {
   margin: 8px 0;
 }
 
-/* === TABS === */
+/* TABS */
 .tabs {
   display: flex;
   gap: 16px;
@@ -126,7 +126,7 @@ header {
   border-bottom: 2px solid #ff9f31;
 }
 
-/* === ITEM LIST === */
+/* ITEM LIST */
 .item-list {
   display: flex;
   flex-direction: column;
@@ -171,7 +171,7 @@ header {
   color: #333;
 }
 
-/* === BUTTONS === */
+/* BUTTONS */
 .add-btn {
   background: #ff9f31;
   color: white;
@@ -285,6 +285,8 @@ header {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s ease;
+  width: 100%;
+  margin-top: 16px;
 }
 
 #order-btn:hover {
@@ -319,7 +321,7 @@ header {
 }
 
 
-/* === FOOTER === */
+/* FOOTER */
 footer {
   background-color: #222;
   color: white;
@@ -341,7 +343,175 @@ footer {
 }
 
 
-/* === MISC === */
 .background {
   color: bisque;
+}
+
+.mobile-cart-btn {
+  display: none;
+}
+
+@media (max-width: 710px) {
+
+  .restaurant-header {
+    padding: 80px 16px 24px;
+    margin: 8px -16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 8px;
+  }
+
+  .item-list {
+    margin: 0 -16px;
+  }
+
+
+  .restaurant-header h1 {
+    text-align: center;
+  }
+
+  .restaurant-header p {
+    text-align: center;
+  }
+
+  .logo-container {
+    top: -60px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    padding: 10px 4px;
+    font-size: 0.95rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .tab.active {
+    color: #ff9f31;
+    border-bottom: 3px solid #ff9f31;
+    background-color: rgba(255, 159, 49, 0.05);
+  }
+
+  .cart:not(.mobile-cart) {
+    display: none;
+  }
+
+  .mobile-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff9f31;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .mobile-cart-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1001;
+    padding: 0 8px 12px;
+  }
+
+  .mobile-cart-dialog .cart {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  .close-cart-dialog {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .hidden{
+    display: none!important;
+  }
+
+
+
+  #order-btn-mobile {
+    background-color: #ff9f31;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  #order-btn-mobile:hover {
+    background-color: #e28521;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+  .tab {
+    font-size: 0.85rem;
+    padding: 8px 2px;
+  }
 }
