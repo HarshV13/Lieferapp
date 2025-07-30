@@ -201,7 +201,7 @@ header {
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
 }
 
 
@@ -236,6 +236,10 @@ footer {
 }
 
 @media (max-width: 710px) {
+
+  .wrapper {
+    padding-inline: 24px;
+  }
 
   .restaurant-header {
     padding: 80px 16px 24px;
@@ -309,7 +313,7 @@ footer {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 16px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ff9f31;
@@ -320,10 +324,13 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     cursor: pointer;
+    white-space: nowrap;
   }
 
   .mobile-cart-dialog {
+    pointer-events: none;
     position: fixed;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -335,11 +342,21 @@ footer {
     padding: 0 8px 12px;
   }
 
+  .mobile-cart {
+  pointer-events: auto;
+  background: white;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 16px;
+}
+
   .mobile-cart-dialog .cart {
     background: white;
     width: 100%;
     max-width: 480px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 20px 20px;
     padding: 24px;
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
@@ -354,10 +371,13 @@ footer {
     background: none;
     border: none;
     cursor: pointer;
+
   }
 
   .mobile-cart-overlay {
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -366,8 +386,8 @@ footer {
     z-index: 1000;
   }
 
-  .hidden{
-    display: none!important;
+  .hidden {
+    display: none !important;
   }
 
 
@@ -388,6 +408,12 @@ footer {
 
   #order-btn-mobile:hover {
     background-color: #e28521;
+  }
+
+  .cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
   }
 
 }
